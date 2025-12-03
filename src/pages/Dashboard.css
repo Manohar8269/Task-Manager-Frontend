@@ -1,0 +1,173 @@
+/* ==============================
+   🌟 Modern Dashboard Styling
+   ============================== */
+
+body {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* ===== Dashboard Container ===== */
+.dashboard-container {
+  max-width: 850px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px 40px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== Header ===== */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.dashboard-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2d2d2d;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Logout Button ===== */
+.logout-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff3b3b);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 59, 59, 0.3);
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #ff3b3b, #ff1f1f);
+  transform: scale(1.05);
+}
+
+/* ===== Task Form ===== */
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.task-form input:focus {
+  border-color: #0072ff;
+  box-shadow: 0 0 5px rgba(0, 114, 255, 0.2);
+}
+
+.task-form button {
+  background: linear-gradient(135deg, #0072ff, #00b4ff);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.task-form button:hover {
+  background: linear-gradient(135deg, #0062e0, #00aaff);
+  transform: scale(1.05);
+}
+
+/* ===== Task List ===== */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-card {
+  background: #f9fbff;
+  border: 1.5px solid #e6edff;
+  border-radius: 14px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 114, 255, 0.05);
+}
+
+.task-card:hover {
+  background: #f2f7ff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 114, 255, 0.1);
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2d2d2d;
+  font-weight: 600;
+}
+
+.task-info p {
+  margin-top: 5px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===== Delete Button ===== */
+.delete-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff3b3b);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #ff3b3b, #ff1f1f);
+  transform: scale(1.05);
+}
+
+/* ===== Empty State ===== */
+.no-task {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
