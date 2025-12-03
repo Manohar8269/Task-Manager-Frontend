@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // ✅ Create a pre-configured Axios instance
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // change if backend URL differs in production
+  baseURL: 'https://task-manager-backend-bo7r.onrender.com', // change if backend URL differs in production
   headers: {
     'Content-Type': 'application/json',
   },
