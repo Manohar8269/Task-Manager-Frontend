@@ -5,7 +5,7 @@ import './TaskList.css'; // ✅ optional custom styling
 function TaskList({ tasks, fetchTasks }) {
   const handleDelete = async (id) => {
     try {
-      await API.delete(`/tasks/${id}`);
+      await API.delete(`/api/tasks/${id}`);
       fetchTasks();
     } catch (err) {
       console.error('❌ Error deleting task:', err);

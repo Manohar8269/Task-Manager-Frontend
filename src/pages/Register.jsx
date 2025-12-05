@@ -11,7 +11,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await API.post('/auth/register', { name, email, password });
+      const res = await API.post('/api/auth/register', { name, email, password });
 
       if (res && res.data) {
         alert('✅ Registration Successful! Please login now.');

@@ -16,7 +16,7 @@ function TaskForm({ fetchTasks }) {
 
     try {
       setLoading(true);
-      const res = await API.post('/tasks', { title, description });
+      const res = await API.post('/api/tasks', { title, description });
       console.log('✅ Task added:', res.data);
 
       // Reset form fields
