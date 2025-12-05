@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import API from '../axios';
 import { AuthContext } from '../context/AuthContext';
-import './Login.css'; // ✅ Import your CSS file
+import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -13,21 +13,21 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await API.post('/auth/login', { email, password });
+      const res = await API.post('/api/auth/login', { email, password });
       console.log('✅ Login Response:', res.data);
 
-      // Extract token
       const { token } = res.data;
 
       if (token) {
-        // ✅ Save token and user info
         const userData = { email };
+
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(userData));
+
         loginUser(userData);
 
         alert('🎉 Login Successful!');
-        navigate('/dashboard'); // Redirect to dashboard
+        navigate('/dashboard');
       } else {
         alert('Login failed: No token received');
       }
@@ -49,6 +49,7 @@ function Login() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+
           <input
             type="password"
             placeholder="Enter your password"
@@ -56,8 +57,10 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+
           <button type="submit">Login</button>
         </form>
+
         <p className="login-footer">
           Don’t have an account? <Link to="/register">Register</Link>
         </p>

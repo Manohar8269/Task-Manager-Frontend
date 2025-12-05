@@ -4,7 +4,7 @@ import TaskForm from '../components/TaskForm';
 import TaskList from '../components/TaskList';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import './Dashboard.css'; // ✅ Import CSS
+import './Dashboard.css';
 
 function Dashboard() {
   const [tasks, setTasks] = useState([]);
@@ -13,10 +13,10 @@ function Dashboard() {
 
   const fetchTasks = async () => {
     try {
-      const res = await API.get('/tasks');
+      const res = await API.get('/api/tasks');
       setTasks(res.data);
     } catch (err) {
-      console.log(err);
+      console.log('❌ Error fetching tasks:', err);
     }
   };
 
